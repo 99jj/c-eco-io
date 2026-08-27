@@ -1124,6 +1124,572 @@ li{
     max-width:none;
   }
 }
+<style>
+
+/* =========================================================
+   OPERATIONAL FLOWCHARTS — NEW TAB STYLES
+   ========================================================= */
+
+#operational-flowcharts {
+  --of-ink: #1a1a1a;
+  --of-ink-secondary: #4a4a4a;
+  --of-ink-tertiary: #6b6b6b;
+  --of-border: #c9c9c9;
+  --of-border-light: #e5e5e5;
+  --of-accent: #8b7355;
+  --of-accent-light: #b8a88a;
+  --of-soft: #f7f3ee;
+  --of-soft2: #f8f8f8;
+  --of-paper: #ffffff;
+
+  color: var(--of-ink);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+#operational-flowcharts *,
+#operational-flowcharts *::before,
+#operational-flowcharts *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN WRAPPER
+   ========================================================= */
+
+#operational-flowcharts .of-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 28px 80px;
+}
+
+#operational-flowcharts .of-document {
+  background: var(--of-paper);
+  padding: 52px 58px;
+  border: 1px solid var(--of-border-light);
+  box-shadow: 0 4px 24px rgba(0,0,0,.05);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#operational-flowcharts .of-header {
+  text-align: center;
+  padding-bottom: 34px;
+  margin-bottom: 34px;
+  border-bottom: 2px solid var(--of-ink);
+}
+
+#operational-flowcharts .of-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#operational-flowcharts .of-logo {
+  width: 118px;
+  height: auto;
+  display: block;
+}
+
+#operational-flowcharts .of-institute {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15pt;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--of-ink);
+}
+
+#operational-flowcharts .of-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30pt;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--of-ink);
+  margin-bottom: 12px;
+}
+
+#operational-flowcharts .of-subtitle {
+  font-size: 8.5pt;
+  color: var(--of-ink-tertiary);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+#operational-flowcharts .of-version {
+  text-align: center;
+  color: var(--of-ink-tertiary);
+  font-size: 10pt;
+  margin: 24px 0 30px;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+#operational-flowcharts h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: var(--of-ink);
+  margin: 40px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--of-border);
+}
+
+#operational-flowcharts h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 11pt;
+  font-weight: 800;
+  color: var(--of-ink);
+  margin: 24px 0 10px;
+}
+
+#operational-flowcharts p {
+  color: var(--of-ink-secondary);
+  font-size: 10.5pt;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+#operational-flowcharts .of-intro {
+  text-align: center;
+  color: var(--of-ink-tertiary);
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   NOTICES
+   ========================================================= */
+
+#operational-flowcharts .of-notice {
+  background: var(--of-soft);
+  border-left: 4px solid var(--of-accent);
+  padding: 16px 18px;
+  margin: 22px 0;
+  font-size: 10pt;
+  color: var(--of-ink-secondary);
+}
+
+#operational-flowcharts .of-notice strong {
+  color: var(--of-accent);
+}
+
+#operational-flowcharts .of-trace-note {
+  background: var(--of-soft);
+  border-left: 4px solid var(--of-accent);
+  padding: 14px 18px;
+  margin: 18px 0 30px;
+  font-size: 9.8pt;
+  color: var(--of-ink-secondary);
+  line-height: 1.6;
+}
+
+#operational-flowcharts .of-trace-note strong {
+  color: var(--of-accent);
+}
+
+/* =========================================================
+   MAJOR SECTION DIVIDERS
+   ========================================================= */
+
+#operational-flowcharts .of-major-section {
+  margin: 52px 0 30px;
+  padding: 25px 28px;
+  border: 1px solid var(--of-border-light);
+  border-left: 7px solid var(--of-accent);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,115,85,.12),
+      rgba(255,255,255,0) 58%
+    ),
+    #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.04);
+}
+
+#operational-flowcharts .of-kicker {
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: var(--of-accent);
+  margin-bottom: 8px;
+}
+
+#operational-flowcharts .of-major-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24pt;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--of-ink);
+  margin-bottom: 8px;
+}
+
+#operational-flowcharts .of-major-desc {
+  font-size: 9.5pt;
+  color: var(--of-ink-secondary);
+  margin: 0;
+}
+
+/* =========================================================
+   FLOWCHARTS
+   ========================================================= */
+
+#operational-flowcharts .of-flowchart {
+  margin: 26px 0 34px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--of-border-light);
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  max-width: 100%;
+}
+
+#operational-flowcharts .of-flow-caption {
+  font-size: 9px;
+  font-weight: 900;
+  color: var(--of-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+#operational-flowcharts .of-flow-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+#operational-flowcharts .of-node {
+  flex: 1 1 180px;
+  max-width: 240px;
+  min-width: 170px;
+  padding: 14px 15px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--of-border-light);
+  box-shadow: 0 4px 12px rgba(0,0,0,.045);
+  color: var(--of-ink-secondary);
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+
+#operational-flowcharts .of-node strong {
+  display: block;
+  color: var(--of-ink);
+  font-size: 10pt;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#operational-flowcharts .of-node.entry {
+  border-top: 4px solid var(--of-ink);
+}
+
+#operational-flowcharts .of-node.foundation {
+  border-top: 4px solid var(--of-accent);
+  background: #fdfbf8;
+}
+
+#operational-flowcharts .of-node.decision {
+  border: 2px solid var(--of-accent);
+  background: var(--of-soft);
+}
+
+#operational-flowcharts .of-node.warning {
+  border-top: 4px solid #6b6b6b;
+  background: var(--of-soft2);
+}
+
+#operational-flowcharts .of-node.license {
+  border-top: 4px solid var(--of-accent);
+  background: #fbf8f2;
+}
+
+#operational-flowcharts .of-node.terminal {
+  border-top: 4px solid var(--of-ink);
+  background: #f3f3f3;
+}
+
+#operational-flowcharts .of-node.exit {
+  border-top: 4px solid #c0392b;
+  background: #fdf5f5;
+}
+
+#operational-flowcharts .of-node.bridge {
+  border: 2px dashed var(--of-accent);
+  background: #fdfbf8;
+}
+
+#operational-flowcharts .of-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--of-accent);
+  font-size: 19px;
+  font-weight: 900;
+  min-width: 18px;
+}
+
+/* =========================================================
+   GRIDS / CARDS
+   ========================================================= */
+
+#operational-flowcharts .of-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 20px 0;
+}
+
+#operational-flowcharts .of-grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#operational-flowcharts .of-card {
+  border: 1px solid var(--of-border-light);
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 2px 9px rgba(0,0,0,.035);
+}
+
+#operational-flowcharts .of-label {
+  font-size: 8.5pt;
+  font-weight: 900;
+  color: var(--of-accent);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-bottom: 9px;
+}
+
+#operational-flowcharts .of-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15pt;
+  line-height: 1.2;
+  color: var(--of-ink);
+  margin: 0 0 8px;
+}
+
+#operational-flowcharts .of-card p {
+  font-size: 9.4pt;
+  line-height: 1.55;
+  text-align: left;
+  margin: 0;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+#operational-flowcharts .of-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 18px 0 26px;
+  font-size: 9pt;
+}
+
+#operational-flowcharts .of-table th {
+  background: var(--of-soft);
+  color: var(--of-ink);
+  text-align: left;
+  padding: 10px;
+  border: 1px solid var(--of-border-light);
+  font-weight: 800;
+}
+
+#operational-flowcharts .of-table td {
+  padding: 10px;
+  border: 1px solid var(--of-border-light);
+  color: var(--of-ink-secondary);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   OPERATIONAL STATE PILLS
+   ========================================================= */
+
+#operational-flowcharts .of-state-strip {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0 24px;
+}
+
+#operational-flowcharts .of-state {
+  padding: 8px 14px;
+  border: 1px solid var(--of-border);
+  background: #fff;
+  color: var(--of-ink);
+  font-size: 8.5pt;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+#operational-flowcharts .of-state.warning {
+  background: #fdf9ed;
+  border-color: #e8d5a0;
+  color: #7c5c20;
+}
+
+#operational-flowcharts .of-state.critical {
+  background: #fdf5f5;
+  border-color: #e8b8b8;
+  color: #8b0000;
+}
+
+/* =========================================================
+   FEEDBACK / RECALIBRATION
+   ========================================================= */
+
+#operational-flowcharts .of-feedback {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 30px;
+}
+
+#operational-flowcharts .of-feedback-step {
+  flex: 1 1 150px;
+  max-width: 190px;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid var(--of-border-light);
+  background: #fff;
+  color: var(--of-ink-secondary);
+  font-size: 9pt;
+  box-shadow: 0 3px 10px rgba(0,0,0,.035);
+}
+
+#operational-flowcharts .of-feedback-step strong {
+  display: block;
+  color: var(--of-accent);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15pt;
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#operational-flowcharts .of-footer {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 2px solid var(--of-border-light);
+  font-size: 9pt;
+  color: var(--of-ink-secondary);
+  line-height: 1.6;
+}
+
+#operational-flowcharts .of-footer strong {
+  color: var(--of-ink);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  #operational-flowcharts .of-wrapper {
+    padding: 28px 14px 50px;
+  }
+
+  #operational-flowcharts .of-document {
+    padding: 34px 22px;
+  }
+
+  #operational-flowcharts .of-grid,
+  #operational-flowcharts .of-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  #operational-flowcharts .of-flow-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #operational-flowcharts .of-node {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #operational-flowcharts .of-arrow {
+    transform: rotate(90deg);
+    min-height: 24px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  #operational-flowcharts .of-document {
+    padding: 26px 14px;
+  }
+
+  #operational-flowcharts .of-title {
+    font-size: 24pt;
+  }
+
+  #operational-flowcharts .of-major-title {
+    font-size: 20pt;
+  }
+
+  #operational-flowcharts .of-table {
+    font-size: 7.8pt;
+  }
+
+  #operational-flowcharts .of-table th,
+  #operational-flowcharts .of-table td {
+    padding: 7px 5px;
+  }
+
+}
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  #operational-flowcharts .of-wrapper {
+    padding: 0;
+  }
+
+  #operational-flowcharts .of-document {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #operational-flowcharts .of-flowchart,
+  #operational-flowcharts .of-card,
+  #operational-flowcharts .of-major-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #operational-flowcharts h2,
+  #operational-flowcharts h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+}
+
 
 /* Print */
 @media print{
@@ -1178,6 +1744,7 @@ body{background:#f5f4f2!important;color:#1a1a1a!important;font-family:var(--font
   <button class="nav-tab" onclick="showTab(event,'scientific-foundation')">Scientific Foundation</button>
   <button class="nav-tab" onclick="showTab(event,'tdr')">TDR</button>
   <button class="nav-tab" onclick="showTab(event,'tfp')">TFP</button>
+  <button class="nav-tab" onclick="showTab(event,'operational-flowcharts')">Operational Flowcharts</button>
   <button class="nav-tab" onclick="showTab(event,'living-lab')">Living Labs</button>
   <button class="nav-tab" onclick="showTab(event,'amazon-lab')">Amazon Lab</button>
   <button class="nav-tab" onclick="showTab(event,'manaus-pilot')">Manaus Pilot</button>
@@ -2419,6 +2986,847 @@ under real-world conditions.
 </div>
 </section>
 
+<!-- =========================================================
+     HEADER — c-ECO INSTITUTE
+     ========================================================= -->
+<section id="operational-flowcharts" class="tab-content">
+  
+<div class="page">
+
+<div class="letterhead">
+
+<div class="seal">
+<img src="/assets/img/c-eco.png" alt="c-ECO Institute logo">
+</div>
+
+<div class="org-name">
+c-ECO Institute
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="doc-title">
+
+<div class="chapter-kicker">
+Operational Architecture v1.0 — 2026
+</div>
+
+<h1>
+Operational Governance System
+</h1>
+
+<div class="subtitle">
+Integrated Architecture for Monitoring,
+Classification, Escalation, and Recalibration</div>
+
+</div>
+
+<div class="of-notice">
+
+  <strong>Document Scope:</strong>
+
+  This visual operational guide translates the
+  c-ECO Model Law, the Threshold Function Protocol (TFP) Manual,
+  the Fellowship Program, and the associated contractual
+  and governance instruments into traceable operational procedures.
+
+  It is designed for Fellows, enterprise participants,
+  Living Lab administrators, c-ECO Institute governance bodies,
+  technical authorities, Data Custodians, institutional partners,
+  and external reviewers or auditors.
+
+</div>
+
+
+<!-- =========================================================
+     SECTION I — SYSTEM ORIENTATION
+     ========================================================= -->
+
+<section id="of-system-orientation">
+
+  <div class="of-major-section">
+
+    <div class="of-kicker">
+      Section I
+    </div>
+
+    <div class="of-major-title">
+      System Orientation
+    </div>
+
+    <p class="of-major-desc">
+      Purpose, source instruments, operating map,
+      institutional structure, and executive navigation.
+    </p>
+
+  </div>
+
+
+  <h2>
+    1. Purpose of the Operational Flowcharts
+  </h2>
+
+  <p>
+    The c-ECO Operational Governance System is not merely a theoretical
+    representation of the c-ECO Framework.
+    It is a procedural architecture connecting data certification,
+    prudential classification, governance escalation,
+    contractual response, institutional coordination,
+    and systemic recalibration into a single auditable
+    and traceable operating sequence.
+  </p>
+
+  <p>
+    Its purpose is to make explicit how the principal components
+    of the c-ECO Framework interact in practice:
+    the legal architecture established by the Model Law;
+    the methodological and prudential architecture of the
+    Threshold Function Protocol (TFP);
+    the human-capital and qualification architecture
+    of the Fellowship Program;
+    the Living Lab network;
+    the Institute's institutional governance functions;
+    and the contractual instruments through which
+    implementation may be formally authorized.
+  </p>
+
+  <p>
+    Each section corresponds to a functional layer of the system:
+    intake and routing; qualification and authorization;
+    monitoring and certification; classification and scoring;
+    prudential response; governance escalation;
+    legal and contractual effects; deployment;
+    audit; feedback; and recalibration.
+  </p>
+
+  <div class="of-trace-note">
+
+    <strong>Core principle:</strong>
+
+    the architecture is designed around
+    systemic reversibility before harm:
+    governance becomes operational while corrective capacity
+    still exists, rather than only after material damage
+    or systemic failure has occurred.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOURCE INSTRUMENTS
+     ========================================================= -->
+
+<section id="of-source-instruments">
+
+  <h2>
+    2. Source Instruments
+  </h2>
+
+  <p class="of-intro">
+    The c-ECO Operational Governance System derives its
+    structure from interconnected legal, methodological,
+    institutional, human-capital, and contractual instruments.
+  </p>
+
+
+  <div class="of-flowchart">
+
+    <div class="of-flow-caption">
+      Instrument Architecture
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node foundation">
+        <strong>c-ECO Model Law</strong>
+        systemic reversibility,
+        conditioned legal object,
+        pre-threshold governance,
+        perclusion and IEX
+      </div>
+
+
+      <div class="of-node foundation">
+        <strong>Threshold Function Protocol</strong>
+        P, ΔV, σ and Lr;
+        SPS, TRS and RLS;
+        prudential classification,
+        thresholds and triggers
+      </div>
+
+
+      <div class="of-node foundation">
+        <strong>Fellowship Program</strong>
+        intake, curriculum,
+        recognition, qualification,
+        MAI assessment and
+        enterprise-readiness pipeline
+      </div>
+
+    </div>
+
+
+    <div class="of-flow-row">
+      <div class="of-arrow">↓</div>
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node decision">
+        <strong>c-ECO Institute Governance</strong>
+        institutional custody,
+        program administration,
+        methodological continuity,
+        councils, review structures,
+        documentation and oversight
+      </div>
+
+    </div>
+
+
+    <div class="of-flow-row">
+      <div class="of-arrow">↓</div>
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node bridge">
+        <strong>Contractual & Operational Instruments</strong>
+        FPA · MAI · CDGA · LLEP · CSAM · MSA
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="of-grid">
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Model Law
+      </div>
+
+      <h4>
+        Legal Architecture
+      </h4>
+
+      <p>
+        Establishes the systemic governance doctrine,
+        pre-threshold activation,
+        systemic compatibility,
+        Ex-Ante Unenforceability (IEX),
+        perclusion,
+        conditioned enforceability,
+        Systemic Proof,
+        and the legal relevance of reversibility.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        TFP Manual
+      </div>
+
+      <h4>
+        Methodological Engine
+      </h4>
+
+      <p>
+        Defines how scientific and operational evidence
+        becomes prudentially relevant through
+        Position (P), Velocity (ΔV),
+        Uncertainty (σ),
+        Reversibility Liquidity (Lr),
+        composite scores,
+        trigger functions,
+        bands and calibration protocols.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Fellowship
+      </div>
+
+      <h4>
+        Human Capital Pipeline
+      </h4>
+
+      <p>
+        Structures intake, screening,
+        modular formation,
+        MAI assessment,
+        Fellow-Active and Fellow-Alumni status,
+        supervised participation,
+        and potential progression toward
+        enterprise readiness.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        c-ECO Institute
+      </div>
+
+      <h4>
+        Institutional Custodian
+      </h4>
+
+      <p>
+        Maintains institutional continuity of the framework,
+        coordinates programs and governance processes,
+        preserves documentation,
+        supports Living Labs,
+        constitutes governance bodies,
+        and maintains the separation between
+        institutional, scientific,
+        methodological and operational authority.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Calibration Architecture
+      </div>
+
+      <h4>
+        Scientific & Methodological Integrity
+      </h4>
+
+      <p>
+        Calibration bodies define and periodically review
+        methodological parameters,
+        Safe Operating Space specifications,
+        admissible evidence pathways,
+        uncertainty rules,
+        reference periods,
+        thresholds and technical annexes.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Agreements
+      </div>
+
+      <h4>
+        Operational Authorization
+      </h4>
+
+      <p>
+        Contractual instruments determine
+        whether a participant,
+        institution,
+        Case Study,
+        Living Lab or enterprise engagement
+        possesses authority to access,
+        monitor, deploy or operationalize
+        specific elements of the framework.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="of-trace-note">
+
+    <strong>Instrument rule:</strong>
+
+    recognition, scientific participation,
+    institutional affiliation and operational authorization
+    are separate statuses.
+    No Fellowship credential,
+    technical participation or institutional relationship
+    independently creates enterprise deployment authority.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MASTER OPERATING MAP
+     ========================================================= -->
+
+<section id="of-master-map">
+
+  <h2>
+    3. Master Operating Map
+  </h2>
+
+  <p>
+    The Master Operating Map organizes the c-ECO Framework
+    as an end-to-end institutional process.
+    It identifies how participants,
+    organizations, evidence,
+    methodologies,
+    contractual structures,
+    Living Labs,
+    governance bodies,
+    and the Global Integration Hub
+    connect to one another.
+  </p>
+
+
+  <div class="of-notice">
+
+    <strong>Operational Reference:</strong>
+
+    Fellowship recognition does not confer operational deployment authority.
+    Enterprise deployment requires a distinct authorization pathway,
+    executed agreements,
+    applicable monitoring protocol,
+    data governance,
+    defined territorial or institutional scope,
+    and TFP-based operational classification.
+
+  </div>
+
+
+  <div class="of-flowchart">
+
+    <div class="of-flow-caption">
+      Master Operating Sequence
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node entry">
+        <strong>Fellowship / Institutional / Enterprise Intake</strong>
+        participant or organization enters
+        the c-ECO ecosystem
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node foundation">
+        <strong>Operational Classification</strong>
+        role, status, authority,
+        jurisdiction and applicable instrument defined
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node license">
+        <strong>Authorization Layer</strong>
+        agreements, scope,
+        monitoring conditions and
+        governance requirements established
+      </div>
+
+    </div>
+
+
+    <div class="of-flow-row">
+      <div class="of-arrow">↓</div>
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node">
+        <strong>Data & Evidence</strong>
+        admissible information collected,
+        certified, preserved and made auditable
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node">
+        <strong>TFP Processing</strong>
+        P, ΔV, σ and Lr
+        translated into operational scores
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node decision">
+        <strong>Prudential Classification</strong>
+        operational state and
+        trigger conditions identified
+      </div>
+
+    </div>
+
+
+    <div class="of-flow-row">
+      <div class="of-arrow">↓</div>
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node warning">
+        <strong>Governance Response</strong>
+        review, adjustment,
+        enhanced monitoring,
+        Safe Mode or restoration-first pathway
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node bridge">
+        <strong>Legal / Contractual Effect</strong>
+        continuation,
+        modulation,
+        suspension,
+        perclusion,
+        conversion or restoration duty
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node terminal">
+        <strong>Feedback & Recalibration</strong>
+        outcomes inform methodology,
+        thresholds, curriculum,
+        governance and future deployment
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     OPERATIONAL STRUCTURE
+     ========================================================= -->
+
+<section id="of-operational-structure">
+
+  <h2>
+    3-A. Operational Structure
+  </h2>
+
+  <p>
+    The c-ECO Operational Governance System is organized as
+    a layered procedural architecture.
+    Each layer performs a distinct function while remaining
+    connected to the overall systemic-governance sequence.
+  </p>
+
+
+  <div class="of-flowchart">
+
+    <div class="of-flow-caption">
+      System Navigation Logic
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node foundation">
+        <strong>System Orientation</strong>
+        principles,
+        institutional scope,
+        source instruments
+        and authority structure
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node">
+        <strong>Fellowship & Institutional Pathways</strong>
+        intake,
+        qualification,
+        recognition,
+        readiness and authorization
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node decision">
+        <strong>TFP Operational Engine</strong>
+        variables,
+        scoring,
+        thresholds,
+        prudential bands
+        and trigger logic
+      </div>
+
+    </div>
+
+
+    <div class="of-flow-row">
+      <div class="of-arrow">↓</div>
+    </div>
+
+
+    <div class="of-flow-row">
+
+      <div class="of-node warning">
+        <strong>Governance Response</strong>
+        escalation,
+        review,
+        Safe Mode,
+        restoration-first
+        and institutional routing
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node bridge">
+        <strong>Legal & Contractual Effects</strong>
+        pre-threshold activation,
+        conditional enforceability,
+        perclusion and IEX
+      </div>
+
+      <div class="of-arrow">→</div>
+
+      <div class="of-node terminal">
+        <strong>Feedback & Recalibration</strong>
+        audit,
+        outcome review,
+        threshold updates,
+        curriculum evolution
+        and version control
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="of-trace-note">
+
+    <strong>Structural rule:</strong>
+
+    the c-ECO Institute preserves the institutional architecture,
+    but technical, calibration,
+    data-custody and case-specific operational functions
+    remain subject to their own defined governance mandates.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXECUTIVE PATH
+     ========================================================= -->
+
+<section id="of-executive-path">
+
+  <h2>
+    4. Executive Path
+  </h2>
+
+  <p class="of-intro">
+    Different users enter the framework at different points.
+    These pathways provide rapid navigation without replacing
+    the complete governance architecture.
+  </p>
+
+
+  <div class="of-grid">
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Fellow
+      </div>
+
+      <h4>
+        Fellowship Path
+      </h4>
+
+      <p>
+        Intake
+        → Recognition
+        → Curriculum
+        → MAI
+        → Fellow-Alumni
+        → Enterprise Readiness Review
+        → Separate Authorization.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Enterprise / Institution
+      </div>
+
+      <h4>
+        Deployment Path
+      </h4>
+
+      <p>
+        Institutional Intake
+        → Due Diligence
+        → Agreements
+        → Monitoring Authorization
+        → Data Pipeline
+        → TFP Engine
+        → Governance Response
+        → Contractual Effects.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        c-ECO Institute
+      </div>
+
+      <h4>
+        Institutional Path
+      </h4>
+
+      <p>
+        Framework Custody
+        → Governance Structure
+        → Program Administration
+        → Living Lab Coordination
+        → Documentation
+        → Institutional Interfaces
+        → Feedback & Continuity.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Calibration Council
+      </div>
+
+      <h4>
+        Methodological Path
+      </h4>
+
+      <p>
+        Scientific Review
+        → SOS Definition
+        → Data-Class Authorization
+        → Parameter Calibration
+        → Uncertainty Rules
+        → Threshold Review
+        → Methodological Recalibration.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Living Lab / Case Study
+      </div>
+
+      <h4>
+        Territorial Path
+      </h4>
+
+      <p>
+        Engagement Mandate
+        → Local Governance
+        → Data Custody
+        → Field Monitoring
+        → TFP Processing
+        → Institutional Routing
+        → Outcome Record.
+      </p>
+
+    </div>
+
+
+    <div class="of-card">
+
+      <div class="of-label">
+        Auditor / Reviewer
+      </div>
+
+      <h4>
+        Assurance Path
+      </h4>
+
+      <p>
+        Evidence Chain
+        → QA/QC
+        → Ledger
+        → Classification Logic
+        → Trigger Review
+        → Governance Decisions
+        → Audit
+        → Version Control.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="of-trace-note">
+
+    <strong>Path rule:</strong>
+
+    each path is a functional subset of the complete architecture.
+    No simplified pathway overrides the authority limitations,
+    contractual conditions,
+    calibration requirements,
+    Living Lab governance,
+    or review mechanisms established elsewhere in the framework.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     END PART 1
+     ========================================================= -->
+
+<div class="of-notice">
+
+  <strong>Next section:</strong>
+
+  Section II — Fellowship Pathway:
+  intake, screening, recognition,
+  curriculum, MAI,
+  Fellow-Active / Fellow-Alumni,
+  limits of authority,
+  enterprise readiness
+  and the relationship between Fellowship
+  and operational authorization.
+
+</div>
+  
 <!-- ===================================================== -->
 <!-- TAB — GLOBAL LIVING LAB ARCHITECTURE                  -->
 <!-- ===================================================== -->
