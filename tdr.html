@@ -227,17 +227,11 @@
 
 <span class="k">P(Θ)</span>  = threshold proximity score    <span class="c">// 0.0 → 1.0</span>
 <span class="k">τ(P)</span>  = time-to-threshold estimate   <span class="c">// days | months</span>
-<span class="k">α₁</span>    = alert threshold              <span class="c">// P(Θ) > 0.5</span>
-<span class="k">α₂</span>    = precaution threshold         <span class="c">// P(Θ) > 0.7</span>
-<span class="k">α₃</span>    = intervention threshold       <span class="c">// P(Θ) > 0.85</span>
+<span class="k">α₁, α₂, α₃</span> = calibrated proximity thresholds <span class="c">// values restricted</span>
 <span class="k">τ_c</span>   = critical time minimum        <span class="c">// emergency trigger</span>
 
-<span class="c">// Band assignment</span>
-IF P(Θ) &lt; α₁           → MONITOR
-IF P(Θ) ≥ α₁           → ALERT      → TFP instruments activated
-IF P(Θ) ≥ α₂           → PRECAUTION → elevated instruments
-IF P(Θ) ≥ α₃           → INTERVENTION
-IF τ(P) &lt; τ_c           → EMERGENCY</pre>
+<span class="c">// Calibrated threshold values and worked band-assignment logic are
+// restricted pending legal review. [pending]</span></pre>
   </div>
 </section>
 
